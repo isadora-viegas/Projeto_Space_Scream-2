@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: #faf4fd;
+  margin: auto;
+  text-align: center;
+}
+
+main {
+  margin: 46rem auto 4.6rem;
+  text-align: center;
+}
+
+.grid {
+  min-width: 100%;
+  display: grid;
+}
+
+header {
+  width: 100vw;
+  height: 30rem;
+  margin-right: 9.8rem;
+  text-align: center;
+  animation: begin 3s;
+  background: #8E9AAF;
+  color: white;
+}
+
+header img {
+  margin: 1.5rem auto 1.5rem;
+  align-items: center;
+}
+
+header img:hover {
+  animation: giro 1s;
+}
+ 
+h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 5rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  width: 100%;
+  height: 6rem;
+  padding: 1.5rem 0;
+  background: #CBC0D3;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #2f313f;
+  min-width: 35rem;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin: 6rem auto 12.5rem;
+  padding: 1.6rem;
+}
+
+.img-icecream img {
+  width: 28rem;
+  height: auto;
+  border-radius: 3rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.grid .card:nth-child(3) {
+  display: none;
+}
+
+
+footer {
+  display: none;
+}
+
+.left {
+  animation: esq 3s;
+}
+
+.right {
+  animation: dir 3s;
+}
+
+@keyframes begin {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}  
+
+@keyframes giro {
+  0% {
+    transform: rotate(0);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+@keyframes esq {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dir {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 700px) {
+  main {
+    margin: auto;
+    align-items: center;
+  }
+
+  p {
+    font-size: 2.5rem;
+    width: 65rem;
+    margin: 6rem auto;
+  }
+
+  header {
+    margin-bottom: 30rem;
+  }
+
+  .img-icecream img {
+    min-width: 28rem;
+  }
+
+  .img-icecream {
+    padding: 0;
+  }
+
+  .grid {
+    grid-template-areas: "A C"
+    "B D";
+  }
+
+  .grid .img-icecream div:nth-child(1) {
+    grid-area: A;
+  }
+  
+  .grid .img-icecream div:nth-child(2) {
+    grid-area: D;
+  }
+
+  .grid .img-icecream div:nth-child(3) {
+    grid-area: B;
+  }
+
+  .grid .img-icecream div:nth-child(4) {
+    grid-area: C;
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    margin: auto;
+    align-items: center;
+  }
+
+  p {
+    font-size: 3rem;
+    line-height: 3rem;
+    width: 75rem;
+    margin: 6rem auto;
+  }
+
+  header {
+    margin-bottom: 36rem;
+  }
+
+  .img-icecream {
+    padding: 0; 
+  }  
+
+  .img-icecream img {
+    min-width: 35rem;
+  }
+
+  .grid {
+    grid-template-areas: "A C"
+    "B D";
+  }
+
+  .grid .img-icecream div:nth-child(1) {
+    grid-area: A;
+  }
+  
+  .grid .img-icecream div:nth-child(2) {
+    grid-area: D;
+  }
+
+  .grid .img-icecream div:nth-child(3) {
+    grid-area: B;
+  }
+
+  .grid .img-icecream div:nth-child(4) {
+    grid-area: C;
+  }
+}
+
+
+@media (min-width: 1325px) {
+
+  body {
+    display: flex;
+    height: 100vh;  
+    background: white;
+  }
+
+  header {
+    width: 50rem;
+    height: 100vh;  
+  }
+
+  header:nth-child(1) {
+    margin: 3rem auto 4rem;
+    align-items: center;
+  }  
+
+  h1 {
+    height: 7rem;
+    padding: 2.1rem 0;  
+  }
+
+  p {
+    width: 45rem;
+    color: white;
+    font-size: 2.4rem;
+    list-style: 2rem;
+    margin-top: 10rem;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;  
+    margin-top: 6.4rem
+  }
+  
+  .img-icecream {
+    padding-right: 3.2rem; 
+  }  
+
+  .grid {
+    display: flex;
+    grid-template-columns: 4rem 4rem 4rem;
+  }
+
+  .grid .card:nth-child(3) {
+    display: inline;
+  }  
+
+  .grid .img-icecream img{
+    width: 34rem;
+    height: auto;
+    margin-bottom: 3.2rem;
+  }
+
+  footer {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    color: #4A4E69;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin: 3rem auto 1.4rem;
+    animation: begin 3s;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #4A4E69;
+  }
+  
+  footer a:hover {
+    color: #2f313f;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+}
